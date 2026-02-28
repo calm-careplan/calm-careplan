@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>かーむケアプランセンター｜大阪府箕面市の居宅介護支援事業所</title>
+  <meta name="description" content="大阪府箕面市のケアプランセンター。経験豊富なケアマネジャーが、ご利用者様とご家族に寄り添ったケアプランをご提案します。お気軽にご相談ください。TEL:050-1722-8393">
+  <meta property="og:title" content="かーむケアプランセンター｜大阪府箕面市の居宅介護支援事業所">
+  <meta property="og:description" content="大阪府箕面市のケアプランセンター。経験豊富なケアマネジャーが、ご利用者様とご家族に寄り添ったケアプランをご提案します。">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 17px;
+      color: #333;
+      background: #fff;
+      line-height: 1.8;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; }
+
+    /* ===== カラー変数 ===== */
+    :root {
+      --orange: #F28C28;
+      --orange-dark: #E05F00;
+      --orange-light: #FFF3E0;
+      --orange-mid: #FFDDA8;
+      --text-dark: #2c2c2c;
+      --text-mid: #555;
+      --bg-light: #FFF8F0;
+      --white: #ffffff;
+      --shadow: 0 4px 20px rgba(242,140,40,0.15);
+    }
+
+    /* ===== ヘッダー ===== */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(255,255,255,0.97);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      z-index: 1000;
+      padding: 0 20px;
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+    }
+    .logo-text {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--orange-dark);
+      line-height: 1.2;
+    }
+    .logo-text span {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-mid);
+      letter-spacing: 0.05em;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+    nav ul li a {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dark);
+      padding: 5px 0;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      color: var(--orange);
+      border-bottom-color: var(--orange);
+    }
+    .header-tel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .header-tel a {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--orange-dark);
+    }
+    .header-tel span {
+      font-size: 10px;
+      color: var(--text-mid);
+    }
+
+    /* ハンバーガー */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+      padding: 5px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: var(--orange-dark);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+    .sp-menu {
+      display: none;
+      position: fixed;
+      top: 70px; left: 0; right: 0;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      z-index: 999;
+      padding: 20px;
+    }
+    .sp-menu.open { display: block; }
+    .sp-menu ul { list-style: none; }
+    .sp-menu ul li {
+      border-bottom: 1px solid #f0e0cc;
+    }
+    .sp-menu ul li a {
+      display: block;
+      padding: 14px 10px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .sp-menu ul li a:hover { color: var(--orange); }
+
+    /* ===== ヒーロー ===== */
+    #hero {
+      margin-top: 70px;
+      background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 50%, #FFCC80 100%);
+      padding: 80px 20px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -50px; right: -50px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(242,140,40,0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -80px;
+      width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(242,140,40,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+    .hero-content { flex: 1; }
+    .hero-badge {
+      display: inline-block;
+      background: var(--orange);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      letter-spacing: 0.1em;
+    }
+    .hero-title {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 900;
+      color: var(--orange-dark);
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+    .hero-title span {
+      color: var(--orange);
+      border-bottom: 3px solid var(--orange);
+    }
+    .hero-desc {
+      font-size: 17px;
+      color: var(--text-mid);
+      margin-bottom: 30px;
+      line-height: 1.9;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--orange);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(242,140,40,0.4);
+      transition: all 0.3s;
+    }
+    .btn-primary:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(242,140,40,0.5);
+    }
+    .btn-secondary {
+      background: white;
+      color: var(--orange-dark);
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 2px solid var(--orange);
+      transition: all 0.3s;
+    }
+    .btn-secondary:hover {
+      background: var(--orange-light);
+      transform: translateY(-2px);
+    }
+    .hero-card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px 25px;
+      box-shadow: var(--shadow);
+      min-width: 260px;
+      text-align: center;
+    }
+    .hero-card .card-icon {
+      font-size: 48px;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+    .hero-card h3 {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .hero-card p {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+    .hero-card .tel-big {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--orange-dark);
+      margin-top: 10px;
+      display: block;
+    }
+
+    /* ===== セクション共通 ===== */
+    section { padding: 80px 20px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-label {
+      display: inline-block;
+      background: var(--orange-light);
+      color: var(--orange-dark);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 16px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      letter-spacing: 0.1em;
+    }
+    .section-title {
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 900;
+      color: var(--text-dark);
+      line-height: 1.4;
+    }
+    .section-title span { color: var(--orange); }
+    .section-desc {
+      margin-top: 16px;
+      font-size: 16px;
+      color: var(--text-mid);
+      line-height: 1.9;
+    }
+    .divider {
+      width: 50px;
+      height: 4px;
+      background: var(--orange);
+      border-radius: 2px;
+      margin: 16px auto 0;
+    }
+
+    /* ===== about ===== */
+    #about { background: var(--white); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .about-img-box {
+      background: linear-gradient(135deg, var(--orange-light), var(--orange-mid));
+      border-radius: 20px;
+      height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .about-img-box i {
+      font-size: 80px;
+      color: var(--orange);
+    }
+    .about-img-box p {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--orange-dark);
+    }
+    .about-content h3 {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--orange-dark);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .about-content p {
+      font-size: 16px;
+      color: var(--text-mid);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+    .about-highlight {
+      background: var(--orange-light);
+      border-left: 4px solid var(--orange);
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      font-size: 16px;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    /* ===== サービス ===== */
+    #service { background: var(--bg-light); }
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+    }
+    .service-card:hover { transform: translateY(-5px); }
+    .service-card .s-icon {
+      width: 70px;
+      height: 70px;
+      background: var(--orange-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      font-size: 28px;
+      color: var(--orange);
+    }
+    .service-card h3 {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+    .service-card p {
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.8;
+    }
+
+    /* ===== 選ばれる理由 ===== */
+    #reason { background: white; }
+    .reason-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+    .reason-card {
+      display: flex;
+      gap: 20px;
+      background: var(--bg-light);
+      border-radius: 16px;
+      padding: 28px 24px;
+      align-items: flex-start;
+    }
+    .reason-num {
+      min-width: 52px;
+      height: 52px;
+      background: var(--orange);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 900;
+    }
+    .reason-body h3 {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .reason-body p {
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.8;
+    }
+
+    /* ===== ご利用の流れ ===== */
+    #flow { background: var(--bg-light); }
+    .flow-steps {
+      display: flex;
+      gap: 0;
+      position: relative;
+    }
+    .flow-steps::before {
+      content: '';
+      position: absolute;
+      top: 52px;
+      left: 10%;
+      width: 80%;
+      height: 4px;
+      background: var(--orange-mid);
+      z-index: 0;
+    }
+    .flow-step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 0 15px;
+    }
+    .step-circle {
+      width: 80px;
+      height: 80px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      flex-direction: column;
+      box-shadow: 0 4px 15px rgba(242,140,40,0.4);
+    }
+    .step-circle .step-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 0.05em;
+    }
+    .step-circle .step-num {
+      font-size: 22px;
+      font-weight: 900;
+      color: white;
+      line-height: 1;
+    }
+    .flow-step h3 {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .flow-step p {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+
+    /* ===== FAQ ===== */
+    #faq { background: white; }
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-item {
+      border: 2px solid #f0e0cc;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    .faq-q {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 20px 24px;
+      cursor: pointer;
+      background: white;
+      transition: background 0.3s;
+      user-select: none;
+    }
+    .faq-q:hover { background: var(--orange-light); }
+    .faq-q .q-icon {
+      min-width: 32px;
+      height: 32px;
+      background: var(--orange);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 900;
+    }
+    .faq-q .q-text {
+      flex: 1;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .faq-q .q-arrow {
+      color: var(--orange);
+      font-size: 14px;
+      transition: transform 0.3s;
+    }
+    .faq-item.open .q-arrow { transform: rotate(180deg); }
+    .faq-a {
+      display: none;
+      padding: 0 24px 20px 70px;
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.9;
+      background: #fffaf5;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ===== グループ事業 ===== */
+    #group { background: var(--bg-light); }
+    .group-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .group-card {
+      background: white;
+      border-radius: 20px;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border-top: 5px solid var(--orange);
+      transition: transform 0.3s;
+    }
+    .group-card:hover { transform: translateY(-5px); }
+    .group-card .g-icon {
+      font-size: 50px;
+      color: var(--orange);
+      margin-bottom: 16px;
+    }
+    .group-card h3 {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+    .group-card p {
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .btn-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange-light);
+      color: var(--orange-dark);
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      border: 2px solid var(--orange-mid);
+      transition: all 0.3s;
+    }
+    .btn-group:hover {
+      background: var(--orange);
+      color: white;
+      border-color: var(--orange);
+    }
+
+    /* ===== アクセス ===== */
+    #access { background: white; }
+    .access-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .access-info { }
+    .access-info h3 {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--orange-dark);
+      margin-bottom: 24px;
+    }
+    .access-row {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 18px;
+      align-items: flex-start;
+    }
+    .access-row .a-icon {
+      min-width: 36px;
+      height: 36px;
+      background: var(--orange-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--orange);
+      font-size: 15px;
+    }
+    .access-row .a-body label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--orange-dark);
+      letter-spacing: 0.1em;
+      margin-bottom: 2px;
+    }
+    .access-row .a-body p {
+      font-size: 16px;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+    .access-row .a-body a {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--orange-dark);
+    }
+    .map-box {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      height: 320px;
+    }
+    .map-box iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ===== お問い合わせ ===== */
+    #contact {
+      background: linear-gradient(135deg, var(--orange) 0%, #E05F00 100%);
+      padding: 80px 20px;
+    }
+    #contact .section-title { color: white; }
+    #contact .section-label {
+      background: rgba(255,255,255,0.2);
+      color: white;
+    }
+    #contact .section-desc { color: rgba(255,255,255,0.9); }
+    .contact-box {
+      background: white;
+      border-radius: 24px;
+      padding: 50px 40px;
+      max-width: 700px;
+      margin: 40px auto 0;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    }
+    .contact-box h3 {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .contact-box .tel-main {
+      font-size: 44px;
+      font-weight: 900;
+      color: var(--orange-dark);
+      display: block;
+      margin: 12px 0;
+      letter-spacing: 0.05em;
+    }
+    .contact-box .tel-main i { font-size: 36px; }
+    .contact-box .fax-line {
+      font-size: 18px;
+      color: var(--text-mid);
+      margin-bottom: 16px;
+    }
+    .contact-hours {
+      display: inline-block;
+      background: var(--orange-light);
+      border-radius: 10px;
+      padding: 12px 24px;
+      font-size: 15px;
+      color: var(--text-dark);
+      font-weight: 700;
+      margin-top: 8px;
+    }
+
+    /* ===== フッター ===== */
+    footer {
+      background: #2c2c2c;
+      color: #ccc;
+      padding: 50px 20px 30px;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #444;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .footer-logo .f-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 18px;
+    }
+    .footer-logo .f-name {
+      font-size: 17px;
+      font-weight: 900;
+      color: white;
+    }
+    .footer-about p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #aaa;
+    }
+    .footer-col h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--orange);
+      display: inline-block;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+    .footer-col ul li a {
+      font-size: 14px;
+      color: #aaa;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-col ul li a:hover { color: var(--orange); }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 24px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    /* ===== レスポンシブ ===== */
+    @media (max-width: 900px) {
+      nav, .header-tel { display: none; }
+      .hamburger { display: flex; }
+      .hero-inner { flex-direction: column; }
+      .hero-card { width: 100%; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img-box { height: 200px; }
+      .service-cards { grid-template-columns: 1fr; }
+      .reason-grid { grid-template-columns: 1fr; }
+      .flow-steps { flex-direction: column; gap: 20px; }
+      .flow-steps::before { display: none; }
+      .group-cards { grid-template-columns: 1fr; }
+      .access-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+      .contact-box { padding: 30px 20px; }
+      .contact-box .tel-main { font-size: 32px; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 60px 16px; }
+      .hero-title { font-size: 26px; }
+      .hero-btns { flex-direction: column; }
+      .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== ヘッダー ===== -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <img src="logo.png" alt="かーむケアプランセンター" style="height:54px;width:auto;object-fit:contain;">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">事業所について</a></li>
+        <li><a href="#service">サービス</a></li>
+        <li><a href="#flow">ご利用の流れ</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#access">アクセス</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+    <div class="header-tel">
+      <a href="tel:05017228393"><i class="fa-solid fa-phone"></i> 050-1722-8393</a>
+      <span>月〜金 9:00〜18:00</span>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- スマホメニュー -->
+<div class="sp-menu" id="spMenu">
+  <ul>
+    <li><a href="#about" onclick="closeMenu()"><i class="fa-solid fa-building fa-fw" style="color:var(--orange);margin-right:8px"></i>事業所について</a></li>
+    <li><a href="#service" onclick="closeMenu()"><i class="fa-solid fa-hand-holding-heart fa-fw" style="color:var(--orange);margin-right:8px"></i>サービス</a></li>
+    <li><a href="#flow" onclick="closeMenu()"><i class="fa-solid fa-list-check fa-fw" style="color:var(--orange);margin-right:8px"></i>ご利用の流れ</a></li>
+    <li><a href="#faq" onclick="closeMenu()"><i class="fa-solid fa-circle-question fa-fw" style="color:var(--orange);margin-right:8px"></i>よくある質問</a></li>
+    <li><a href="#access" onclick="closeMenu()"><i class="fa-solid fa-map-location-dot fa-fw" style="color:var(--orange);margin-right:8px"></i>アクセス</a></li>
+    <li><a href="#contact" onclick="closeMenu()"><i class="fa-solid fa-phone fa-fw" style="color:var(--orange);margin-right:8px"></i>お問い合わせ</a></li>
+  </ul>
+</div>
+
+<!-- ===== ヒーロー ===== -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fa-solid fa-star"></i> 大阪府箕面市の居宅介護支援事業所</div>
+      <h1 class="hero-title">
+        あなたらしい生活を、<br>
+        <span>一緒に考えます。</span>
+      </h1>
+      <p class="hero-desc">
+        かーむケアプランセンターは、大阪府箕面市にある居宅介護支援事業所です。<br>
+        経験豊富なケアマネジャーが、ご利用者様・ご家族様に寄り添い、<br>
+        その人らしい生活が送れるよう、丁寧にサポートいたします。
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary"><i class="fa-solid fa-phone"></i> まずはお電話ください</a>
+        <a href="#flow" class="btn-secondary"><i class="fa-solid fa-arrow-right"></i> ご利用の流れを見る</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-icon"><i class="fa-solid fa-phone-volume"></i></div>
+      <h3>お気軽にご相談ください</h3>
+      <p>介護のことなら何でも<br>お電話でご相談いただけます</p>
+      <a href="tel:05017228393" class="tel-big"><i class="fa-solid fa-phone"></i> 050-1722-8393</a>
+      <p style="font-size:13px;color:#999;margin-top:8px">月〜金 9:00〜18:00（土日祝休）</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 事業所について ===== -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">ABOUT US</div>
+      <h2 class="section-title">かーむケアプランセンターとは</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-img-box">
+        <i class="fa-solid fa-house-medical"></i>
+        <p>あなたの「暮らし」を支えます</p>
+      </div>
+      <div class="about-content">
+        <h3>「calm＝穏やか」な生活を<br>ご一緒に実現します</h3>
+        <p>
+          かーむケアプランセンターは、大阪府箕面市を中心に、ご利用者様が住み慣れた地域で安心・安全に生活を続けられるよう支援する居宅介護支援事業所です。
+        </p>
+        <p>
+          介護が必要になった時、「何から始めればいいかわからない」というご家族様も多くいらっしゃいます。私たちは、介護保険の申請から始まり、ケアプランの作成、各サービスとの調整まで、一貫してサポートいたします。
+        </p>
+        <div class="about-highlight">
+          <i class="fa-solid fa-quote-left" style="color:var(--orange);margin-right:8px"></i>
+          ご利用者様・ご家族様の声に耳を傾け、その方らしい暮らしを共に考え、支え続けます。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== サービス内容 ===== -->
+<section id="service">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">SERVICE</div>
+      <h2 class="section-title">サービス内容</h2>
+      <div class="divider"></div>
+      <p class="section-desc">ケアマネジャー（介護支援専門員）が、介護に関するさまざまな相談・手続きをサポートします。</p>
+    </div>
+    <div class="service-cards">
+      <div class="service-card">
+        <div class="s-icon"><i class="fa-solid fa-file-medical"></i></div>
+        <h3>ケアプランの作成</h3>
+        <p>ご利用者様の状態や希望をもとに、必要な介護サービスを組み合わせたケアプラン（居宅サービス計画）を作成します。費用はすべて介護保険から給付されます。</p>
+      </div>
+      <div class="service-card">
+        <div class="s-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h3>サービス調整・連絡</h3>
+        <p>訪問介護・デイサービス・訪問看護など、各介護サービス事業所との連絡調整を行います。ご利用者様が安心してサービスを受けられるよう調整します。</p>
+      </div>
+      <div class="service-card">
+        <div class="s-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+        <h3>モニタリング・見直し</h3>
+        <p>定期的にご自宅を訪問し、サービスの状況や心身の変化を確認します。状態の変化に応じてケアプランの見直しを行い、最適なサービスを維持します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 選ばれる理由 ===== -->
+<section id="reason">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WHY CHOOSE US</div>
+      <h2 class="section-title">選ばれる<span>4つの理由</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="reason-grid">
+      <div class="reason-card">
+        <div class="reason-num"><i class="fa-solid fa-1"></i></div>
+        <div class="reason-body">
+          <h3>地域密着型のきめ細かいサポート</h3>
+          <p>箕面市を中心とした地域に特化しているため、地域の医療機関・介護サービスとのネットワークが充実。迅速で的確なサービスをご提供できます。</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num"><i class="fa-solid fa-2"></i></div>
+        <div class="reason-body">
+          <h3>まずは無料でご相談いただけます</h3>
+          <p>「介護保険を使いたいが何から始めればいい？」など、初めての方でも安心してご相談ください。相談料は一切かかりません。</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num"><i class="fa-solid fa-3"></i></div>
+        <div class="reason-body">
+          <h3>ご本人・ご家族の意思を最優先</h3>
+          <p>ご利用者様とご家族様のご希望・生活スタイルを丁寧にヒアリング。「こうしたい」という思いを大切にしながらケアプランを作成します。</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num"><i class="fa-solid fa-4"></i></div>
+        <div class="reason-body">
+          <h3>グループ連携で幅広くサポート</h3>
+          <p>同グループの訪問リハビリマッサージやユニバーサルタクシーと連携し、医療・移動面でも総合的にお困りごとを解決します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ご利用の流れ ===== -->
+<section id="flow">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">FLOW</div>
+      <h2 class="section-title">ご利用の<span>流れ</span></h2>
+      <div class="divider"></div>
+      <p class="section-desc">初めての方でも安心！4つのステップで介護サービスがスタートします。</p>
+    </div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="step-circle">
+          <span class="step-label">STEP</span>
+          <span class="step-num">1</span>
+        </div>
+        <h3>お電話・ご相談</h3>
+        <p>まずはお気軽にお電話ください。現在の状況をお聞きします。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-circle">
+          <span class="step-label">STEP</span>
+          <span class="step-num">2</span>
+        </div>
+        <h3>介護認定の申請</h3>
+        <p>介護保険の申請がまだの方は、市区町村への申請をサポートします。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-circle">
+          <span class="step-label">STEP</span>
+          <span class="step-num">3</span>
+        </div>
+        <h3>ケアプランの作成</h3>
+        <p>ご本人・ご家族の希望をもとに、最適なケアプランを作成します。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-circle">
+          <span class="step-label">STEP</span>
+          <span class="step-num">4</span>
+        </div>
+        <h3>サービス開始</h3>
+        <p>各サービス事業所と連携し、安心してご利用いただける環境を整えます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">よくある<span>ご質問</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="q-icon">Q</div>
+          <div class="q-text">ケアマネジャーへの相談は無料ですか？</div>
+          <i class="fa-solid fa-chevron-down q-arrow"></i>
+        </div>
+        <div class="faq-a">はい、ケアマネジャーへのご相談は無料です。また、ケアプランの作成費用も介護保険から全額給付されるため、ご利用者様の自己負担はありません。まずはお気軽にご連絡ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="q-icon">Q</div>
+          <div class="q-text">介護保険を使ったことがありません。何から始めればいいですか？</div>
+          <i class="fa-solid fa-chevron-down q-arrow"></i>
+        </div>
+        <div class="faq-a">まずはお電話にてご相談ください。介護保険の申請方法から丁寧にご説明します。お住まいの市区町村（箕面市役所など）への要介護認定の申請が最初のステップです。申請の同行サポートも行っております。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="q-icon">Q</div>
+          <div class="q-text">ケアマネジャーを途中で変更することはできますか？</div>
+          <i class="fa-solid fa-chevron-down q-arrow"></i>
+        </div>
+        <div class="faq-a">はい、いつでも変更することができます。担当ケアマネジャーとの相性や、より自宅に近い事業所へ変更したいなどのご希望があれば、遠慮なくご相談ください。手続きはスムーズに行えます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="q-icon">Q</div>
+          <div class="q-text">要介護認定の結果が出るまでどのくらいかかりますか？</div>
+          <i class="fa-solid fa-chevron-down q-arrow"></i>
+        </div>
+        <div class="faq-a">申請から結果が出るまで、通常30日程度かかります。緊急の場合は暫定ケアプランを作成してサービスを先行して開始することも可能です。詳しくはお問い合わせください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="q-icon">Q</div>
+          <div class="q-text">サービスの利用を断られることはありますか？</div>
+          <i class="fa-solid fa-chevron-down q-arrow"></i>
+        </div>
+        <div class="faq-a">かーむケアプランセンターでは、お断りすることなくすべてのご相談をお受けしています。担当エリアや状況によっては他の事業所をご紹介することもありますが、まずはお気軽にご連絡ください。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== グループ事業 ===== -->
+<section id="group">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">GROUP</div>
+      <h2 class="section-title">グループ<span>関連事業</span></h2>
+      <div class="divider"></div>
+      <p class="section-desc">同法人のグループ事業と連携し、より幅広いサポートをご提供しています。</p>
+    </div>
+    <div class="group-cards">
+      <div class="group-card" style="padding:0;overflow:hidden;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="massage.jpg" alt="石井訪問リハビリマッサージ" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+        </div>
+        <div style="padding:28px 24px 32px;">
+          <div class="g-icon" style="margin-top:0;margin-bottom:12px;"><i class="fa-solid fa-hand-holding-medical"></i></div>
+          <h3>石井訪問リハビリマッサージ</h3>
+          <p>ご自宅に訪問し、国家資格を持つ施術師が医療マッサージ・機能訓練を行います。身体機能の維持・改善をサポートします。</p>
+          <a href="#" class="btn-group"><i class="fa-solid fa-arrow-right"></i> 詳しく見る</a>
+        </div>
+      </div>
+      <div class="group-card" style="padding:0;overflow:hidden;">
+        <div style="width:100%;height:200px;overflow:hidden;background:#f0f4f8;display:flex;align-items:center;justify-content:center;">
+          <img src="taxi.jpg" alt="ユニバーサルタクシー箕面" style="width:100%;height:100%;object-fit:contain;object-position:center;">
+        </div>
+        <div style="padding:28px 24px 32px;">
+          <div class="g-icon" style="margin-top:0;margin-bottom:12px;"><i class="fa-solid fa-van-shuttle"></i></div>
+          <h3>ユニバーサルタクシー箕面</h3>
+          <p>車いすのままご乗車いただけるユニバーサルタクシーです。通院・外出のサポートをいたします。お気軽にご利用ください。</p>
+          <a href="#" class="btn-group"><i class="fa-solid fa-arrow-right"></i> 詳しく見る</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== アクセス ===== -->
+<section id="access">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">ACCESS</div>
+      <h2 class="section-title">アクセス</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="access-grid">
+      <div class="access-info">
+        <h3>かーむケアプランセンター</h3>
+        <div class="access-row">
+          <div class="a-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="a-body">
+            <label>所在地</label>
+            <p>〒562-0003<br>大阪府箕面市西小路2-11-5<br>パールハイム2-C</p>
+          </div>
+        </div>
+        <div class="access-row">
+          <div class="a-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="a-body">
+            <label>電話番号</label>
+            <a href="tel:05017228393">050-1722-8393</a>
+          </div>
+        </div>
+        <div class="access-row">
+          <div class="a-icon"><i class="fa-solid fa-fax"></i></div>
+          <div class="a-body">
+            <label>FAX番号</label>
+            <p>050-3852-4526</p>
+          </div>
+        </div>
+        <div class="access-row">
+          <div class="a-icon"><i class="fa-solid fa-clock"></i></div>
+          <div class="a-body">
+            <label>営業時間</label>
+            <p>月曜日〜金曜日 9:00〜18:00<br>（土日祝日 休業）</p>
+          </div>
+        </div>
+      </div>
+      <div class="map-box">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.5!2d135.47!3d34.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000f9b4e0000001%3A0x1!2z5aSn6Ziq5bqX576k6Z-z5biC6KW/5bCP6Lev77yS5LiB55uu77yR77yR4oiS77yV!5e0!3m2!1sja!2sjp!4v1700000000000"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="かーむケアプランセンター 地図">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== お問い合わせ ===== -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">CONTACT</div>
+      <h2 class="section-title">お問い合わせ</h2>
+      <p class="section-desc">介護のことで少しでも不安やお悩みがあれば、お気軽にご連絡ください。</p>
+    </div>
+    <div class="contact-box">
+      <h3><i class="fa-solid fa-phone" style="color:var(--orange)"></i> お電話でのお問い合わせ</h3>
+      <a href="tel:05017228393" class="tel-main"><i class="fa-solid fa-phone"></i> 050-1722-8393</a>
+      <p class="fax-line"><i class="fa-solid fa-fax"></i> FAX：050-3852-4526</p>
+      <div class="contact-hours">
+        <i class="fa-solid fa-clock" style="color:var(--orange);margin-right:6px"></i>
+        受付時間：月〜金 9:00〜18:00（土日祝休）
+      </div>
+      <p style="margin-top:20px;font-size:15px;color:#888">まずはお気軽に！相談無料・秘密厳守です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== フッター ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="footer-logo">
+          <img src="logo.png" alt="かーむケアプランセンター" style="height:52px;width:auto;object-fit:contain;filter:brightness(0) invert(1);">
+        </div>
+        <p>大阪府箕面市を中心に、ご利用者様・ご家族様に寄り添った居宅介護支援サービスを提供しています。介護のことならお気軽にご相談ください。</p>
+      </div>
+      <div class="footer-col">
+        <h4>サイトメニュー</h4>
+        <ul>
+          <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> 事業所について</a></li>
+          <li><a href="#service"><i class="fa-solid fa-chevron-right"></i> サービス内容</a></li>
+          <li><a href="#flow"><i class="fa-solid fa-chevron-right"></i> ご利用の流れ</a></li>
+          <li><a href="#faq"><i class="fa-solid fa-chevron-right"></i> よくある質問</a></li>
+          <li><a href="#access"><i class="fa-solid fa-chevron-right"></i> アクセス</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i> お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>グループ事業</h4>
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-hand-holding-medical"></i> 石井訪問リハビリマッサージ</a></li>
+          <li><a href="#"><i class="fa-solid fa-van-shuttle"></i> ユニバーサルタクシー箕面</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 かーむケアプランセンター All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ハンバーガーメニュー
+  const hamburger = document.getElementById('hamburger');
+  const spMenu = document.getElementById('spMenu');
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    spMenu.classList.toggle('open');
+  });
+  function closeMenu() {
+    hamburger.classList.remove('active');
+    spMenu.classList.remove('open');
+  }
+
+  // FAQアコーディオン
+  document.querySelectorAll('.faq-q').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = this.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // スクロール時ヘッダー
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('header');
+    if (window.scrollY > 50) {
+      header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.12)';
+    } else {
+      header.style.boxShadow = '0 2px 12px rgba(0,0,0,0.08)';
+    }
+  });
+</script>
+</body>
+</html>
